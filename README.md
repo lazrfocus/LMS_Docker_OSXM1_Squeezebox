@@ -90,10 +90,10 @@ xattr -r -d com.apple.quarantine SqueezePlay.app>)
 - I have not been able to find a good free squeezebox player on iOS so I purchased iPeng.  Its decent, and has lots of features but not the best UI.
 
 ## Links
-[Logitech Media Server Git Repo](https://github.com/Logitech/slimserver)
-[Squeezelite Git Repo from Ralph Irving](https://github.com/ralph-irving/squeezelite)
-[Squeezelite Binaries not on github for some reason](https://sourceforge.net/projects/lmsclients/files/squeezelite/)
-[Portainer](https://github.com/portainer/portainer/)
-[iPeng](http://penguinlovesmusic.de/ipeng-8/)
+- [Logitech Media Server Git Repo](https://github.com/Logitech/slimserver)
+- [Squeezelite Git Repo from Ralph Irving](https://github.com/ralph-irving/squeezelite)
+- [Squeezelite Binaries not on github for some reason](https://sourceforge.net/projects/lmsclients/files/squeezelite/)
+- [Portainer](https://github.com/portainer/portainer/)
+- [iPeng](http://penguinlovesmusic.de/ipeng-8/)
 
 
