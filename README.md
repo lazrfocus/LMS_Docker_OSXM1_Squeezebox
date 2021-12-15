@@ -82,6 +82,7 @@ xattr -r -d com.apple.quarantine SqueezePlay.app
 
 ##### Note on compiling squeezelite on M1
 - It took me a very long time to figure all this out.  The git repo would not compile for M1, even after I spent many many hours trying to relink libraries.  To save myself a headache in the future, I decided to write this guide up for myself and publish it for others.
+- With Docker & Mac, you cant mount an audio device directly, so you cant use the squeezelite docker image.
 - The .app file which is provided by Ralph Irving's git repo seems to not do anything and just bounces in the task tray.  I have no idea why he didnt provide the binary located inside, as it is just a terminal app to begin with.
 - You can check the commands for squeezelite by polling the binary with:  ./squeezelite -h
 - There is no reason to download the zip file located in this git repo if you do not trust it for whatever reason.  Feel free to grab the binary from Ralph's original git repo linked below.
