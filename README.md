@@ -61,7 +61,7 @@ OSX playback:
 		- You can also try to edit the .plist attributes file to run the squeezelite player with the app icon, but I have had mixed results
 		- To enable running the .app without OSX complaining the file is damaged or other security issues, run the following command:
 ```bash 
-xattr -r -d com.apple.quarantine SqueezePlay.app>)
+xattr -r -d com.apple.quarantine SqueezePlay.app
 ``` 
 
 - Run the binary like this to enable playback on OSX
