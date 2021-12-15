@@ -43,7 +43,7 @@ services:
     #network_mode: "host"   #i honestly forget if this is needed, experiment
 ```
 
-This docker compose file should start a webserver on http://localhost:9337
+This docker compose file should start a webserver on http://localhost:9337.  *Note, some web browsers block localhost, like Vivaldi, so you need to use 127.0.0.1 or the local 192. IP*
 
 I recommend using Portainer to setup and control the docker by pasting the above docker-compose code into a new "stack".
 
@@ -72,18 +72,28 @@ xattr -r -d com.apple.quarantine SqueezePlay.app>)
 - Access the player from the web browser remote, or from iPhone app.
 
 ## For lazy, The squeezelite binary file from the .app file:
+## !!! This is for M1 Mac !!!
 ![[Squeezelite_1392_appandbin.zip]]
 
 ### UPNP / Chromecast / Airplay:
 - I was only able to see chromecast and UPNP devices by putting my docker behind the network_mode = "host" to share the local IP instead of creating a containerized network
 	- Most likely due to how it uses ports, unable to look into this any further
+	- In the end, I still wasnt able to get my audio streaming to my chromecast device, but it wasnt very important so I gave up on it.
 
+##### Note on compiling squeezelite on M1
+- It took me a very long time to figure all this out.  The git repo would not compile for M1, even after I spent many many hours trying to relink libraries.  To save myself a headache in the future, I decided to write this guide up for myself and publish it for others.
+- The .app file which is provided by Ralph Irving's git repo seems to not do anything and just bounces in the task tray.  I have no idea why he didnt provide the binary located inside, as it is just a terminal app to begin with.
+- You can check the commands for squeezelite by polling the binary with:  ./squeezelite -h
+- There is no reason to download the zip file located in this git repo if you do not trust it for whatever reason.  Feel free to grab the binary from Ralph's original git repo linked below.
+- Let me know if you have luck compiling the squeezelite source on M1!
+- I can now stream audio to all my devices in my house.  The same song plays on my desktop, laptop, and phone.  I also have access to spotify, soundcloud, tidal, qobuz, all from the same app.
+- I have not been able to find a good free squeezebox player on iOS so I purchased iPeng.  Its decent, and has lots of features but not the best UI.
 
 ## Links
 [Logitech Media Server Git Repo](https://github.com/Logitech/slimserver)
 [Squeezelite Git Repo from Ralph Irving](https://github.com/ralph-irving/squeezelite)
 [Squeezelite Binaries not on github for some reason](https://sourceforge.net/projects/lmsclients/files/squeezelite/)
 [Portainer](https://github.com/portainer/portainer/)
-
+[iPeng](http://penguinlovesmusic.de/ipeng-8/)
 
 
